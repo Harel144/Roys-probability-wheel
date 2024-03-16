@@ -5,6 +5,7 @@ import '../styles.css'
 function WheelForm() {
   const [choices, setChoices] = useState([{ text: '', prob: '', editable: true }]);
   const [sum, setSum] = useState(0);
+  const [isTextChanging, setIsTextChanging] = useState(false);
 
   const chooseRandom = (arr) => {
     var rand_num = parseFloat(Math.random());
@@ -73,7 +74,14 @@ function WheelForm() {
             />
             
             {!friend.editable && (
-              <button onClick={() => deleteOption(index)}>X</button>
+                <button style={{
+                  backgroundColor: "transparent",
+                  color: "red",
+                  border: "none",
+                  fontSize: "16px",
+                  cursor: "pointer",
+                  padding: 0,
+                }} onClick={() => deleteOption(index)}>X</button>
             )}
             {friend.editable && sum !== 1 && (
               <button onClick={() => addChoice(index)}>
@@ -101,7 +109,7 @@ function WheelForm() {
               disabled={!friend.editable}
             />
             
-            {!friend.editable && (
+            {!friend.editable && !isTextChanging && (
               <button style={{
                 backgroundColor: "transparent",
                 color: "red",
@@ -120,7 +128,8 @@ function WheelForm() {
         )) 
       ))}
       {sum === 1 && (
-        <RandomTextChanger texts={choices.map(option => option.text)} stopAtIndex={chooseRandom(choices)} />
+        <RandomTextChanger texts={choices.map(option => option.text)} stopAtIndex={chooseRandom(choices)} setIsTextChanging={setIsTextChanging} 
+        />
       )}
     </div>
   );

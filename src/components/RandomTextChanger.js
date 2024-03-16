@@ -70,8 +70,9 @@ class RandomTextChanger extends Component {
   }
 
   handleButtonClick = () => {
-    const { texts } = this.props;
-    
+    const { texts, returnToIndex, setIsTextChanging } = this.props; // Get setIsTextChanging from props
+    setIsTextChanging(true); // Set isTextChanging to true before starting text changing process
+
     this.setState({
       currentText: texts[0], // Reset to the first text
       currentIndex: 0, // Reset to the first index
@@ -95,6 +96,7 @@ class RandomTextChanger extends Component {
       if (this.state.remainingTime <= 0) {
         clearInterval(this.interval);
         this.setState({ isChangingText: false }); // Set flag to indicate text changing process has finished
+        setIsTextChanging(false);
       }
     }, 187);
   }
