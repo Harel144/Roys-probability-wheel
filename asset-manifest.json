@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Roys-probability-wheel/static/css/main.f2c865ab.css",
+    "main.js": "/Roys-probability-wheel/static/js/main.fc4357db.js",
+    "static/js/453.fd5e2b5e.chunk.js": "/Roys-probability-wheel/static/js/453.fd5e2b5e.chunk.js",
+    "static/media/SpinSound.mp3": "/Roys-probability-wheel/static/media/SpinSound.503c23ef0b8b43558fce.mp3",
+    "index.html": "/Roys-probability-wheel/index.html",
+    "main.f2c865ab.css.map": "/Roys-probability-wheel/static/css/main.f2c865ab.css.map",
+    "main.fc4357db.js.map": "/Roys-probability-wheel/static/js/main.fc4357db.js.map",
+    "453.fd5e2b5e.chunk.js.map": "/Roys-probability-wheel/static/js/453.fd5e2b5e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2c865ab.css",
+    "static/js/main.fc4357db.js"
+  ]
+}
