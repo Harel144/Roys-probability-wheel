@@ -27,7 +27,6 @@ const chooseRandom = (choices) => {
 
   for (let i = 0; i < choices.length; i++) {
     cumulative_prob += parseFloat(choices[i].weight) / weight_total
-    console.log(cumulative_prob+", " + rand_num)
     if (rand_num < cumulative_prob) {
       return i;
     }
